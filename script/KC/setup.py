@@ -295,11 +295,11 @@ def webui_req(U, W, M):
     for item in line: download(item)
 
     if U not in ['SwarmUI', 'ComfyUI']:
-        e = 'png' if U in ['Forge-Classic', 'Forge-Neo'] else 'png'
+        e = 'jpg' if U in ['Forge-Classic', 'Forge-Neo'] else 'png'
         SyS(f'rm -f {W}/html/card-no-preview.{e}')
 
         for ass in [
-            f'https://huggingface.co/gutris1/webui/resolve/main/misc/card-no-preview.png {W}/html card-no-preview.{e}'
+            f'https://huggingface.co/CoreFSX/misc/resolve/main/card-no-preview.png {W}/html card-no-preview.{e}'
         ]: download(ass)
 
         if U not in ['Forge', 'Forge-Neo']: download(f'https://github.com/NullCD/segsmaker-custom/raw/main/config/config.json {W} config.json')
