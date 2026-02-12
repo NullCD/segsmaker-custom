@@ -1,5 +1,4 @@
 {
-    "gradio_theme": "NoCrypt/miku",
     "lora_preferred_name": "Filename",
     "samples_filename_pattern": "[datetime<%M%S>]",
     "show_progressbar": true,
@@ -15,7 +14,7 @@
     "quicksettings_list": [
         "sd_model_checkpoint",
         "sd_vae",
-        "randn_source",
+        "CLIP_stop_at_last_layers",
         "emphasis"
     ],
     "ui_tab_order": [
