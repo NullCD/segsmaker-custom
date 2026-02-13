@@ -15,7 +15,6 @@
     "tac_showWikiLinks": true,
     "quicksettings_list": [
         "sd_model_checkpoint",
-        "sd_vae",
         "CLIP_stop_at_last_layers"
     ],
     "ui_tab_order": [
