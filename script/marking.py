@@ -24,8 +24,7 @@ CD = os.chdir
 
 def purgeVAR():
     l = [
-        'WebUI', 'Models', 'WebUI_Output', 'Extensions', 'Embeddings', 'UNET', 'VAE',
-        'CKPT', 'LORA', 'TMP_CKPT', 'TMP_LORA', 'Forge_SVD', 'Adetailer', 'Upscalers'
+        'WebUI', 'Models', 'WebUI_Output', 'Extensions', 'Embeddings','VAE', 'CKPT', 'LORA', 'TMP_CKPT', 'TMP_LORA', 'Upscalers'
     ]
     for v in l:
         if v in globals(): del globals()[v]
@@ -51,9 +50,8 @@ def setWebUIVAR(ui):
     CKPT = Models / ckpt if ckpt else None
     LORA = Models / lora if lora else None
     Upscalers = Models / upscaler if upscaler else None
-    Adetailer = Models / adetailer if adetailer else None
 
-    return WebUI, Models, WebUI_Output, Extensions, Embeddings, VAE, CKPT, LORA, Upscalers, Adetailer
+    return WebUI, Models, WebUI_Output, Extensions, Embeddings, VAE, CKPT, LORA, Upscalers
 
 if SM:
     @register_line_magic
@@ -79,7 +77,7 @@ if marked.exists():
     purgeVAR()
 
     ui = getWebUIName(marked)
-    WebUI, Models, WebUI_Output, Extensions, Embeddings, VAE, CKPT, LORA, Upscalers, Adetailer = setWebUIVAR(ui)
+    WebUI, Models, WebUI_Output, Extensions, Embeddings, VAE, CKPT, LORA, Upscalers = setWebUIVAR(ui)
     
     TMP_CKPT = TMP / 'ckpt'
     TMP_LORA = TMP / 'lora'
