@@ -187,7 +187,7 @@ def webui_extension(U, W, M):
 
     say('<br><b>【{red} Installing Extensions{d} 】{red}</b>')
     clone(str(W / 'asd/extension.txt'))
-    if ENVNAME == 'Kaggle': clone('https://github.com/gutris1/sd-image-encryption')
+    if ENVNAME == 'Kaggle': clone('https://github.com/anxety-solo/sd-encrypt-image')
 
 def webui_installation(U, W):
     M = W / 'models'
